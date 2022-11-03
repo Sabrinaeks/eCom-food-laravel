@@ -47,6 +47,36 @@
               </div>
             @endforeach
         </div>
+        <div class="trending-wrapper">
+          <h3>Products</h3>
+              @foreach ($products as $item)
+              <div class="trending-item">
+                  <a href="detail/{{$item['id']}}">
+                  <img class="trending-image" src="{{$item['gallery']}}">
+                  <div class="">
+                    <h6 class="text-primary">{{$item['name']}}</h6>
+                    <p class="text-primary">{{$item['description']}}</p>
+                <button class="btn btn-primary">Add to Cart</button>
+                  </div>
+                  </a>
+                </div>
+              @endforeach
+          </div>
+          <div class="trending-wrapper">
+            <h3>Products</h3>
+                @foreach ($products as $item)
+                <div class="trending-item">
+                    <a href="detail/{{$item['id']}}">
+                    <img class="trending-image" src="{{$item['gallery']}}">
+                    <div class="">
+                      <h6 class="text-primary">{{$item['name']}}</h6>
+                      <p class="text-primary">{{$item['description']}}</p>
+                  <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                    </a>
+                  </div>
+                @endforeach
+            </div>
       </div>
 </div>
 @endsection
